@@ -1,15 +1,25 @@
-name: Container Promotion
+name: Deploy To Production
 
 on:
-  push:
-    tags:
-      - test
-      - prod
+  workflow_dispatch:
 
 env:
   PROJECT: approval_sample
 
 jobs:
+
+  releaseNotes: 
+    name: Release Preparation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: release number + notes + commit sha 
+
+      - name: create release
+
+
   build:
     name: Container Promotion - OCP
     runs-on: ubuntu-latest
