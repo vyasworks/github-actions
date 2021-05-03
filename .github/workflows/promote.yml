@@ -15,9 +15,12 @@ jobs:
         uses: actions/checkout@v2
 
       - name: release number + notes + commit sha 
+        run: |
+          echo "Release Number XYZ"
 
       - name: create release
-
+        run: |
+          echo "Git Create release"
 
   build:
     name: Container Promotion - OCP
